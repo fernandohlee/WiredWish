@@ -1,0 +1,31 @@
+<div class="modal-header">
+	<h3 class="modal-title">New Wish</h3>
+</div>
+<div class="modal-body">
+	<div>
+		<form class="form-signin" ng-submit="createWish()">
+			<input type="text" ng-model="wish.name" class="form-control"
+				placeholder="Wish name" autofocus required> 
+			<br />
+			<input type="text" ng-model="wish.description" class="form-control"
+				placeholder="Description" required>
+			<br />	
+			<input type="url" ng-model="wish.link" class="form-control"
+				placeholder="Url"> 
+			<br />
+			<input type="number" ng-model="wish.price" class="form-control"
+				placeholder="Price" required>
+			<br />
+			<span class="formLabel">Joy rate</span>
+			<div > 
+			    <rating class="glyphBig" value="rate" ng-click="assignjoyRatio(rate)"
+			    state-on="'glyphicon-heart'" state-off="'glyphicon-heart-empty'"></rating>
+			</div>
+				
+			<button class="btn btn-success pull-right" type="submit"><i class="fa fa-plus"></i>&nbsp;Create Wish</button>
+		</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

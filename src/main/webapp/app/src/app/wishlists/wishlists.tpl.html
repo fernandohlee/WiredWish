@@ -1,0 +1,44 @@
+<div ng-include="'partials/nav.tpl.html'"></div> 
+
+<div class="container">
+	<h2><i class="fa fa-angellist"></i>&nbsp;Hi! <span ng-bind="userName"></span> these are your wishlists</h2>
+	
+	
+	
+	<div ng-controller="ModalNewWishlistCtrl">
+	    <script type="text/ng-template">
+    </script>
+	   	<button type="button" ng-click="open()" class="btn btn-sm btn-success pull-right">
+			<i class="fa fa-plus">
+			</i>&nbsp;Create wishlist
+		</button>    
+	</div>
+	
+	<div ng-controller="WishlistsTableCtrl">
+	
+		<table st-table="displayedCollection" st-safe-src="wishlists" class="table table-striped">
+			<thead>
+			<tr>
+				<th st-sort="name">Name</th>
+				<th st-sort="description">Description</th>
+				<th>Actions</th>
+			</tr>
+			<tr>
+				<th colspan="3"><input st-search="" class="form-control" placeholder="Wishlists search ..." type="text"/></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="row in displayedCollection">
+				<td><a ui-sref="wishes({idWishlist:row.idWishlist})"  >{{row.name}}</a></td>
+				<td>{{row.description}}</td>
+				<td>
+				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+					<i class="fa fa-trash"></i>
+				</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	
+	</div>
+</div>

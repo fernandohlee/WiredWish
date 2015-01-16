@@ -1,0 +1,19 @@
+<div class="modal-header">
+	<h3 class="modal-title">New Wishlist</h3>
+</div>
+<div class="modal-body">
+	<div>
+		<form class="form-signin" ng-submit="createWishlist()">
+			<input type="text" ng-model="wishlist.name" class="form-control"
+				placeholder="Wishlist name" autofocus required> 
+			<br />
+			<input type="text" ng-model="wishlist.description" class="form-control"
+				placeholder="Description" required>
+			<br />	
+			<button class="btn btn-success pull-right" type="submit"><i class="fa fa-plus"></i>&nbsp;Create</button>
+		</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

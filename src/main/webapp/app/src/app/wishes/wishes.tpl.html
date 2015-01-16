@@ -1,0 +1,50 @@
+<div ng-include="'partials/nav.tpl.html'"></div> 
+
+<div class="container">
+	<h2><i class="fa fa-magic"></i>&nbsp;<span ng-bind="wishlistName"></span> by <span ng-bind="userName"></span> </h2>
+	<h4><span ng-bind="wishlistDescription"></span></h4>
+
+	<div ng-controller="ModalNewWishCtrl">
+	<script type="text/ng-template">
+    </script>
+	   	<button type="button" ng-click="open()" class="btn btn-sm btn-success pull-right">
+			<i class="fa fa-plus">
+			</i>&nbsp;Add a wish
+		</button>    
+	</div>
+	<div ng-controller="WishesTableCtrl">
+	
+		<table st-table="displayedCollection" st-safe-src="wishes" class="table table-striped">
+			<thead>
+			<tr>
+				<th st-sort="name">Name</th>
+				<th st-sort="description">Description</th>
+				
+				<th>Price</th>
+				<th>Joy rate</th>
+				<th>Link</th>
+				<th>Actions</th>
+			</tr>
+			<tr>
+				<th colspan="6"><input st-search="" class="form-control" placeholder="Wishes search ..." type="text"/></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="row in displayedCollection">
+				<td>{{row.name}}</td>
+				<td>{{row.description}}</td>
+				<td>${{row.price}}</td>
+				<td>	
+					<rating value="row.joyRatio"  state-on="'glyphicon-heart'" state-off="'glyphicon-heart-empty'" readonly="true"></rating>
+			    </td>
+				<td><a href="{{row.link}}" target="_blank" ><i class="fa fa-external-link-square"></i></a></td>
+				<td>
+				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+					<i class="fa fa-trash"></i>
+				</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	
+</div>

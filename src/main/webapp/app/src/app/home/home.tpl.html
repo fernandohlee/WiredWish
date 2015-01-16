@@ -1,0 +1,66 @@
+
+<div class="container">
+	<div class="navbar navbar-default">
+		<div class="navbar-header">
+			<div class="navbar-brand">
+				Wired Wish <small> your wishes made social </small>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div class="" id="loginModal">
+				<div class="modal-header">
+					<h3>Have an Account?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="well">
+						<div>
+							<tabset> <tab heading="Login">
+							<div class="container">
+								<div>
+									<div ng-controller="LoginCtrl">
+										<h1 class="text-center login-title">Sign in to continue
+											to Wired Wish</h1>
+										<form class="form-signin" ng-submit="login()">
+											<input  type="text" ng-model="account.userName"
+												class="form-control" placeholder="User name"
+												autofocus required> 
+											<input  type="password" ng-model="account.password"
+												class="form-control" placeholder="Password" required>
+											<button class="btn btn-lg btn-primary btn-block"
+												type="submit">Log in</button>
+										</form>											
+									</div>
+								</div>
+							</div>
+							</tab> <tab heading="Register">
+							<div class="container">
+								<div>
+									<div ng-controller="RegisterCtrl">
+										<h1 class="text-center login-title">Register new account
+											to Wired Wish</h1>
+										<form class="form-signin" ng-submit="register()">
+											<input  type="text" ng-model="account.userName"
+												class="form-control" placeholder="New user name"
+												autofocus required> 
+											<input  type="password" ng-model="account.password"
+												class="form-control" placeholder="Password" required>
+											<button class="btn btn-lg btn-primary btn-block"
+												type="submit">Register</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							</tab> </tabset>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
