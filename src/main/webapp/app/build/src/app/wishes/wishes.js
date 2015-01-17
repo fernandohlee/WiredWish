@@ -51,7 +51,7 @@ angular.module( 'ngBoilerplate.wishes', [
 .controller('ModalInstanceNewWishCtrl', function ($scope, $modalInstance, wishesBroadcastService, wishesService) {
     
   $scope.wish = {
-          name:"Gone Girl",description:"by the author Gillian Flynn",link:"http://mx.casadellibro.com/libro-perdida-gone-girl/9788439726821/2082172",price:132,joyRatio:0,wishStatus:1
+          name:"",description:"",link:"",price:0,joyRatio:0,wishStatus:1
   };
 
   $scope.cancel = function () {
