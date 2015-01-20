@@ -37,7 +37,7 @@ public class WishlistController {
 	
 	@RequestMapping(value = "/{idWishlist}", method = RequestMethod.DELETE)
 	@PreAuthorize("permitAll")
-	public ResponseEntity<WishlistResource> deleteBlogEntry(
+	public ResponseEntity<WishlistResource> deleteWishlist(
 			@PathVariable Integer idWishlist) {
 		Wishlist entry = wishlistService.deleteWishlist(idWishlist);
 		if (entry != null) {
