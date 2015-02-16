@@ -7,3 +7,6 @@ WiredWish/src/main/java/com/wiredwish/rest/mvc
 
 -FrontEnd
 WiredWish/src/main/webapp/app
+
+-home
+http://localhost:8080/wiredwish/index.html#/home
