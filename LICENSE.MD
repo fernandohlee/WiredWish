@@ -1,1 +1,1 @@
-Copyright (c) 2015 Fernando Hei Martinez Lee <zenco_@hotmail.com> test
+Copyright (c) 2015 Fernando Hei Martinez Lee <zenco_@hotmail.com>
